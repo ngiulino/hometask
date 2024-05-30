@@ -173,7 +173,3 @@ test.describe('Check leaves menu items and switch to manager account', () => {
 This project is set up to run Playwright tests for the specified environment. Ensure your `.env` file is correctly configured, and you have all dependencies installed. Follow the steps above to clone the repository, set up Playwright, and execute the test scripts.
 
 For any issues or contributions, please feel free to raise an issue or create a pull request on the repository.
-
----
-
-Feel free to customize any part of this README file as per your specific requirements or preferences.
