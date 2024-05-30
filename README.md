@@ -19,6 +19,25 @@ First, ensure you have Node.js installed. Then, install the dependencies, includ
 npm install
 ```
 
+## Setting Up Environment Variables
+
+Create a `.env` file in the root directory of the project and add the following environment variables:
+
+```plaintext
+# Environment configuration
+
+# URL
+BASE_URL=https://www.siteToTest.test/
+
+# Employee credentials
+EMPLOYEE_EMAIL=testmail@xyz.yxa
+EMPLOYEE_PASSWORD=passwordxyz
+
+# Manager credentials
+MANAGER_EMAIL=testmail@xyz.yxa
+MANAGER_PASSWORD=passwordxyz
+```
+
 ## Configuring Playwright
 
 Playwright's configuration file is `playwright.config.js`. Make sure it looks like this:
@@ -154,3 +173,7 @@ test.describe('Check leaves menu items and switch to manager account', () => {
 This project is set up to run Playwright tests for the specified environment. Ensure your `.env` file is correctly configured, and you have all dependencies installed. Follow the steps above to clone the repository, set up Playwright, and execute the test scripts.
 
 For any issues or contributions, please feel free to raise an issue or create a pull request on the repository.
+
+---
+
+Feel free to customize any part of this README file as per your specific requirements or preferences.
