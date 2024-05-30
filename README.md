@@ -19,25 +19,6 @@ First, ensure you have Node.js installed. Then, install the dependencies, includ
 npm install
 ```
 
-## Setting Up Environment Variables
-
-Create a `.env` file in the root directory of the project and add the following environment variables:
-
-```plaintext
-# Environment configuration
-
-# URL
-BASE_URL=https://access.hrblizz.dev/
-
-# Employee credentials
-EMPLOYEE_EMAIL=demo+DJ-01109@mercans.com
-EMPLOYEE_PASSWORD=Employee1!
-
-# Manager credentials
-MANAGER_EMAIL=demo+VF-00309@mercans.com
-MANAGER_PASSWORD=Manager1!
-```
-
 ## Configuring Playwright
 
 Playwright's configuration file is `playwright.config.js`. Make sure it looks like this:
