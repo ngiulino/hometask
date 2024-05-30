@@ -13,6 +13,29 @@ cd hometask
 
 ## Installing Playwright Framework
 
+### Installing on Windows
+
+1. **Install Node.js**:
+   - Download the latest LTS version of Node.js from the [official Node.js website](https://nodejs.org/).
+   - Run the downloaded installer and follow the prompts to complete the installation.
+   - Verify the installation by opening a command prompt and typing:
+     ```bash
+     node -v
+     npm -v
+     ```
+
+2. **Install Playwright**:
+   - Open a command prompt and navigate to the project directory:
+     ```bash
+     cd path\to\your\project\hometask
+     ```
+   - Install the dependencies, including Playwright, using npm:
+     ```bash
+     npm install
+     ```
+
+### Installing on Other Systems
+
 First, ensure you have Node.js installed. Then, install the dependencies, including Playwright, using npm:
 
 ```bash
@@ -167,13 +190,3 @@ test.describe('Check leaves menu items and switch to manager account', () => {
   });
 });
 ```
-
-## Conclusion
-
-This project is set up to run Playwright tests for the specified environment. Ensure your `.env` file is correctly configured, and you have all dependencies installed. Follow the steps above to clone the repository, set up Playwright, and execute the test scripts.
-
-For any issues or contributions, please feel free to raise an issue or create a pull request on the repository.
-
----
-
-Feel free to customize any part of this README file as per your specific requirements or preferences.
