@@ -1,50 +1,122 @@
-# HomeTask Project
+# Setting Up Playwright on Windows and macOS
 
-This project contains test scripts for quality assurance using the Playwright framework.
+This guide will help you install and set up Playwright on both Windows and macOS for running end-to-end tests.
 
-## Cloning the Project
+## Prerequisites
 
-To get started, clone the repository using the following command:
+Before installing Playwright, ensure you have the following prerequisites:
 
-```bash
-git clone https://github.com/ngiulino/hometask.git
-cd hometask
-```
+1. **Node.js**: Playwright requires Node.js. You can download and install the latest LTS version from the [official Node.js website](https://nodejs.org/).
+2. **Git**: If you plan to clone a repository, ensure Git is installed. You can download it from the [official Git website](https://git-scm.com/).
 
-## Installing Playwright Framework
+## Step-by-Step Installation
 
-### Installing on Windows
+### For Windows
 
-1. **Install Node.js**:
-   - Download the latest LTS version of Node.js from the [official Node.js website](https://nodejs.org/).
-   - Run the downloaded installer and follow the prompts to complete the installation.
-   - Verify the installation by opening a command prompt and typing:
-     ```bash
-     node -v
-     npm -v
-     ```
+#### Step 1: Install Node.js
 
-2. **Install Playwright**:
-   - Open a command prompt and navigate to the project directory:
-     ```bash
-     cd path\to\your\project\hometask
-     ```
-   - Install the dependencies, including Playwright, using npm:
-     ```bash
-     npm install
-     ```
+1. Download the latest LTS version of Node.js from [Node.js](https://nodejs.org/).
+2. Run the installer and follow the prompts to complete the installation.
+3. Verify the installation by opening Command Prompt and typing:
+   ```bash
+   node -v
+   npm -v
+   ```
 
-### Installing on Other Systems
+#### Step 2: Install Git (Optional)
 
-First, ensure you have Node.js installed. Then, install the dependencies, including Playwright, using npm:
+If you need to clone a repository, install Git:
 
-```bash
-npm install
-```
+1. Download the latest version of Git from [Git](https://git-scm.com/).
+2. Run the installer and follow the prompts to complete the installation.
+3. Verify the installation by opening Command Prompt and typing:
+   ```bash
+   git --version
+   ```
+
+#### Step 3: Clone Your Project Repository
+
+If you have a project repository to work with, clone it using Git:
+
+1. Open Command Prompt.
+2. Navigate to the directory where you want to clone the repository:
+   ```bash
+   cd path\to\your\desired\directory
+   ```
+3. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
+   ```
+
+#### Step 4: Install Playwright
+
+1. Open Command Prompt.
+2. Navigate to your project directory:
+   ```bash
+   cd path\to\your\project
+   ```
+3. Install Playwright and other dependencies using npm:
+   ```bash
+   npm install
+   ```
+
+### For macOS
+
+#### Step 1: Install Node.js
+
+1. Download the latest LTS version of Node.js from [Node.js](https://nodejs.org/).
+2. Run the installer and follow the prompts to complete the installation.
+3. Verify the installation by opening Terminal and typing:
+   ```bash
+   node -v
+   npm -v
+   ```
+
+#### Step 2: Install Git (Optional)
+
+If you need to clone a repository, install Git:
+
+1. Git is usually pre-installed on macOS. You can verify it by opening Terminal and typing:
+   ```bash
+   git --version
+   ```
+2. If Git is not installed, you can install it using Homebrew:
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   brew install git
+   ```
+
+#### Step 3: Clone Your Project Repository
+
+If you have a project repository to work with, clone it using Git:
+
+1. Open Terminal.
+2. Navigate to the directory where you want to clone the repository:
+   ```bash
+   cd path/to/your/desired/directory
+   ```
+3. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
+   ```
+
+#### Step 4: Install Playwright
+
+1. Open Terminal.
+2. Navigate to your project directory:
+   ```bash
+   cd path/to/your/project
+   ```
+3. Install Playwright and other dependencies using npm:
+   ```bash
+   npm install
+   ```
 
 ## Setting Up Environment Variables
 
-Create a `.env` file in the root directory of the project and add the following environment variables:
+Create a `.env` file in the root directory of your project and add the necessary environment variables. Example:
 
 ```plaintext
 # Environment configuration
@@ -63,7 +135,7 @@ MANAGER_PASSWORD=passwordxyz
 
 ## Configuring Playwright
 
-Playwright's configuration file is `playwright.config.js`. Make sure it looks like this:
+Ensure that your `playwright.config.js` file is properly set up. Example configuration:
 
 ```javascript
 import { defineConfig } from '@playwright/test';
@@ -94,19 +166,9 @@ export default defineConfig({
 });
 ```
 
-## Running the Test Scripts
+## Writing and Running Tests
 
-To run the test scripts, use the following command:
-
-```bash
-npx playwright test
-```
-
-This command will execute all the test scripts located in the `tests` directory.
-
-## Example Test Script
-
-Here's an example of a test script that you might find in the `tests` directory:
+Create your test scripts in the `tests` directory. Here is an example test script:
 
 ```javascript
 import { test, expect, Page } from '@playwright/test';
@@ -190,3 +252,13 @@ test.describe('Check leaves menu items and switch to manager account', () => {
   });
 });
 ```
+
+## Running Your Tests
+
+To execute the test scripts, use the following command:
+
+```bash
+npx playwright test
+```
+
+This command will run all the test scripts located in the `tests` directory.
